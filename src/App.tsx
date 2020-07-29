@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TodoListItem } from "./TodoListItem";
-import { Todo } from "./types";
+import { Todo, ToggleTodo } from "./types";
 
 //type of Array that takes a generic Todo
 const initialTodos: Array<Todo> = [
@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState(initialTodos);
 
   //toggles todos
-  const toggleTodo = (selectedTodo: Todo) => {
+  const toggleTodo: ToggleTodo = selectedTodo => {
     const newTodos = todos.map((todo) => {
       if (todo === selectedTodo) {
         return {
