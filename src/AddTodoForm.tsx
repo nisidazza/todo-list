@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AddTodoForm:React.FC = () => {
+const AddTodoForm:React.FC = () => {
   return (
     <form>
       <input type="text" />
@@ -8,3 +8,5 @@ export const AddTodoForm:React.FC = () => {
     </form>
   );
 };
+
+export default AddTodoForm;

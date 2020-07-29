@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { TodoList } from "./TodoList";
+import AddTodoForm from "./AddTodoForm";
 import { Todo, ToggleTodo } from "./types";
 
 //type of Array that takes a generic Todo
@@ -29,6 +30,7 @@ const App: React.FC = () => {
   return (
     <div>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <AddTodoForm />
     </div>
   );
 };
