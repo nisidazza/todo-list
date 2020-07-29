@@ -12,6 +12,20 @@ const App: React.FC = () => {
   //add state
   const [todos, setTodos] = useState(initialTodos);
 
+  //toggles todos
+  const toggleTodo = (selectedTodo: Todo) => {
+    const newTodos = todos.map((todo) => {
+      if (todo === selectedTodo) {
+        return {
+          ...todo,
+          complete: !todo.complete,
+        };
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
   return (
     <div>
       <TodoListItem todo={todos[0]} />
