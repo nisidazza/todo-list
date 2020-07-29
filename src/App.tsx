@@ -1,21 +1,17 @@
 import React from "react";
 import { TodoListItem } from "./TodoListItem";
+import { Todo } from "./types";
 
-//conformed to the todo in TodoListItemProps
-type Todo = {
-  text: string;
-  complete: boolean;
-}
-
-
-const todos = [{text:"Walk the dog", complete: true},
-{text: "Write app", complete: false}
-]
+//type of Array that takes a generic Todo
+const todos: Array<Todo> = [
+  { text: "Walk the dog", complete: true },
+  { text: "Write app", complete: false },
+];
 
 const App: React.FC = () => {
   return (
     <div>
-      <TodoListItem />
+      <TodoListItem todo={todos[0]}/>
     </div>
   );
 };
