@@ -1,10 +1,10 @@
 import React from "react";
-import { Todo } from "./types";
+import { Todo, ToggleTodo } from "./types";
 import "./TodoListItem.css";
 
 interface TodoListItemProps {
   todo: Todo;
-  toggleTodo: (selectedTodo: Todo) => void;
+  toggleTodo: ToggleTodo;
 }
 
 export const TodoListItem: React.FC<TodoListItemProps> = ({ todo }) => {
