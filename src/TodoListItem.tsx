@@ -4,6 +4,7 @@ import "./TodoListItem.css";
 
 interface TodoListItemProps {
   todo: Todo;
+  toggleTodo: (selectedTodo: Todo) => void;
 }
 
 export const TodoListItem: React.FC<TodoListItemProps> = ({ todo }) => {

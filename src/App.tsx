@@ -28,8 +28,8 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <TodoListItem todo={todos[0]} />
-      <TodoListItem todo={todos[1]} />
+      <TodoListItem todo={todos[0]} toggleTodo={toggleTodo} />
+      <TodoListItem todo={todos[1]} toggleTodo={toggleTodo} />
     </div>
   );
 };
