@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AddTodoForm = (props) => {
+export const AddTodoForm:React.FC = () => {
   return (
     <form>
       <input type="text" />
