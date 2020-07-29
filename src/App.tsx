@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { TodoListItem } from "./TodoListItem";
+import { TodoList } from "./TodoList";
 import { Todo, ToggleTodo } from "./types";
 
 //type of Array that takes a generic Todo
-const initialTodos: Array<Todo> = [
+const initialTodos:Todo[] = [
   { text: "Walk the dog", complete: true },
   { text: "Write app", complete: false },
 ];
@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState(initialTodos);
 
   //toggles todos
-  const toggleTodo: ToggleTodo = selectedTodo => {
+  const toggleTodo: ToggleTodo = (selectedTodo) => {
     const newTodos = todos.map((todo) => {
       if (todo === selectedTodo) {
         return {
@@ -28,8 +28,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <TodoListItem todo={todos[0]} toggleTodo={toggleTodo} />
-      <TodoListItem todo={todos[1]} toggleTodo={toggleTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} />
     </div>
   );
 };
