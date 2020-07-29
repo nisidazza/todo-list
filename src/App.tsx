@@ -27,6 +27,10 @@ const App: React.FC = () => {
     setTodos(newTodos);
   };
 
+  const addTodos = (newTodo: string) => {
+    setTodos([...todos, {text: newTodo, complete: false}])
+  }
+
   return (
     <div>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
