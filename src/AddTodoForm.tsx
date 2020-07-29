@@ -1,7 +1,8 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import {AddTodo} from "./types";
 
 interface AddTodoFormProps {
-  addTodo: (newTodo: string) => void;
+  addTodo: AddTodo;
 }
 
 const AddTodoForm: React.FC = () => {
