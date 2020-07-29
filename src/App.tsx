@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import { TodoListItem } from "./TodoListItem";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div>Hello World</div>
+    <div>
+      <TodoListItem />
+    </div>
   );
-}
+};
 
 export default App;
