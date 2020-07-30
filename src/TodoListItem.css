@@ -5,3 +5,8 @@
 input.checkbox {
     margin:1em !important;
 }
+
+input[type=checkbox] {
+    width: 20px; 
+    height: 20px; 
+}
