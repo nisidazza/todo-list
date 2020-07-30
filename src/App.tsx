@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TodoList } from "./TodoList";
 import AddTodoForm from "./AddTodoForm";
 import { Todo, ToggleTodo, AddTodo } from "./types";
+import "./App.css";
 
 //type of Array that takes a generic Todo
 const initialTodos: Todo[] = [
@@ -33,7 +34,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center m-0 pt-3">
+      <h2 className="title">My Todo List</h2>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
       <AddTodoForm addTodo={addTodo} />
     </div>

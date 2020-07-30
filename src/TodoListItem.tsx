@@ -7,11 +7,15 @@ interface TodoListItemProps {
   toggleTodo: ToggleTodo;
 }
 
-export const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleTodo }) => {
+export const TodoListItem: React.FC<TodoListItemProps> = ({
+  todo,
+  toggleTodo,
+}) => {
   return (
     <li>
       <label className={todo.complete ? "complete" : undefined}>
         <input
+          className="checkbox"
           type="checkbox"
           checked={todo.complete}
           onChange={() => toggleTodo(todo)}

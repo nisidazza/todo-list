@@ -1,0 +1,20 @@
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url("/images/sticky-paper.jpg");
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+}
+
+.title {
+    font-size: 4em;
+    background-image: linear-gradient(to bottom right, white, orange);
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+    padding: 0.5em;
+    box-shadow: 5px 10px 18px #888888;
+}

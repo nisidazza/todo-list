@@ -19,9 +19,9 @@ const AddTodoForm: React.FC<AddTodoFormProps> = ({addTodo}) => {
   };
 
   return (
-    <form>
-      <input type="text" value={newTodo} onChange={handleChange} />
-      <button type="submit" onClick={handleSubmit}>Add Todo</button>
+    <form className="input-group col-4">
+      <input className="form-control" type="text" value={newTodo} onChange={handleChange} />
+      <button className="btn btn-info p-1 ml-1" type="submit" onClick={handleSubmit}>Add Todo</button>
     </form>
   );
 };
